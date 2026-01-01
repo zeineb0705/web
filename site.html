@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESEN Business Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="small busnis/small bus.css">
+</head>
+<body>
+    <!-- Header ESEN -->
+    <header class="esen-header">
+        <div class="esen-logo">
+            <div class="logo-circle">ESEN</div>
+            <div class="esen-text">
+                <h1 class="esen-title">École Supérieure de l'Économie Numérique</h1>
+                <p class="esen-subtitle">المدرسة العليا للاقتصاد الرقمي</p>
+            </div>
+        </div>
+        <div class="user-menu">
+            <div class="user-info" id="userInfo">
+                <i class="fas fa-user-circle"></i>
+                <span>Non connecté</span>
+            </div>
+            <button class="login-btn" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i> Connexion
+            </button>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="overlay">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h2><i class="fas fa-store"></i> Bienvenue dans votre Small Business</h2>
+                <p class="subtitle">Plateforme de gestion et partage de produits - ESEN Edition</p>
+                <p>Choisissez votre activité ou ajoutez la vôtre :</p>
+            </div>
+            <div class="buttons-section">
+                <h3><i class="fas fa-th-large"></i> Activités disponibles</h3>
+                <div class="buttons" id="businessButtons">
+                    <!-- Buttons will be added by JavaScript -->
+                </div>
+            </div>
+            <!-- Add New Business -->
+            <div class="add-section">
+                <h3><i class="fas fa-plus-circle"></i> Ajouter une nouvelle activité</h3>
+                <div class="add-form">
+                    <input type="text" id="newBusiness" placeholder="Nom de votre business">
+                    <button id="addBtn">
+                        <i class="fas fa-plus"></i> Ajouter
+                    </button>
+                </div>
+            </div>
+            <!-- Products Management (Hidden by default) -->
+            <div class="products-section" id="productsSection">
+                <h3><i class="fas fa-box-open"></i> Gestion des produits</h3>
+                <div class="current-business" id="currentBusiness">
+                    <p>Activité : <span id="selectedActivity">Aucune sélectionnée</span></p>
+                </div>
+                <div class="products-container">
+                    <!-- Add Product Form -->
+                    <div class="add-product-form">
+                        <h4><i class="fas fa-plus-square"></i> Ajouter un produit</h4>
+                        <div class="form-group">
+                            <input type="text" id="productName" placeholder="Nom du produit">
+                            <input type="text" id="productPrice" placeholder="Prix (د.ت)">
+                            <button id="addProductBtn">
+                                <i class="fas fa-save"></i> Enregistrer le produit
+                            </button>
+                        </div>
+                    </div> 
+                    <!-- Products List -->
+                    <div class="products-list" id="productsList">
+                        <h4><i class="fas fa-list"></i> Produits enregistrés</h4>
+                        <div class="empty-products" id="emptyProducts">
+                            <i class="fas fa-box-open"></i>
+                            <p>Aucun produit ajouté pour cette activité</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-lock"></i> Connexion à votre espace</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Connectez-vous pour gérer et partager vos produits</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Adresse email</label>
+                        <input type="email" id="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-key"></i> Mot de passe</label>
+                        <input type="password" id="password" placeholder="Votre mot de passe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="businessName"><i class="fas fa-store"></i> Nom de votre business</label>
+                        <input type="text" id="businessName" placeholder="Nom de votre entreprise">
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-sign-in-alt"></i> Se connecter
+                    </button>
+                </form>
+                <div class="demo-credentials">
+                    <p><strong>Compte démo :</strong> demo@esen.com / password123</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="esen-footer">
+        <p>© 2024 ESEN - École Supérieure de l'Économie Numérique. Tous droits réservés.</p>
+        <p class="footer-arabic">المدرسة العليا للاقتصاد الرقمي</p>
+    </footer>
+    <!-- Photo Modal will be added by JavaScript -->
+    <script src="small busnis/Untitled-1.js"></script>
+</body>
+</html>
